@@ -21,7 +21,7 @@ namespace UdpListener
         private static string Deserialize(UdpReceiveResult packet)
         {
             var txt = Encoding.ASCII.GetString(packet.Buffer);
-            return string.Format($"Received: {txt} from {packet.RemoteEndPoint.Address} at {DateTime.Now}");
+            return string.Format($"Received ({txt}) from {packet.RemoteEndPoint.Address} at {DateTime.Now}");
         }
 
         private static IObservable<UdpReceiveResult> UdpStream()

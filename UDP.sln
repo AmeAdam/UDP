@@ -11,6 +11,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XorTest", "XorTest\XorTest.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZipTest", "ZipTest\ZipTest.csproj", "{47B81B29-1B19-4FAF-AAA4-5760445E6ED5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcService", "GrpcService\GrpcService.csproj", "{AE35ECF4-6440-4D35-889D-9BCAF19AE0D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrpcClient", "GrpcClient\GrpcClient.csproj", "{F0D4BAB5-C0FC-4425-8693-ED1F42FC0199}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{47B81B29-1B19-4FAF-AAA4-5760445E6ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{47B81B29-1B19-4FAF-AAA4-5760445E6ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{47B81B29-1B19-4FAF-AAA4-5760445E6ED5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE35ECF4-6440-4D35-889D-9BCAF19AE0D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE35ECF4-6440-4D35-889D-9BCAF19AE0D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE35ECF4-6440-4D35-889D-9BCAF19AE0D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE35ECF4-6440-4D35-889D-9BCAF19AE0D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F0D4BAB5-C0FC-4425-8693-ED1F42FC0199}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0D4BAB5-C0FC-4425-8693-ED1F42FC0199}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0D4BAB5-C0FC-4425-8693-ED1F42FC0199}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0D4BAB5-C0FC-4425-8693-ED1F42FC0199}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

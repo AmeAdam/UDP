@@ -6,6 +6,9 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <EnablePreviewFeatures>True</EnablePreviewFeatures>
+        <GenerateRequiresPreviewFeaturesAttribute>True</GenerateRequiresPreviewFeaturesAttribute>
+        <LangVersion>latest</LangVersion>
     </PropertyGroup>
 
     <ItemGroup>

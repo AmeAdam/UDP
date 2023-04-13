@@ -22,5 +22,10 @@ RUN apt update; apt install libmsquic -y; apt clean -y;
 
 WORKDIR /app
 COPY --from=build /src/GrpcClient/AmeCA.pem /etc/ssl/certs/AmeCA.pem
+
+#COPY --from=build /src/GrpcClient/AmeCA.crt /usr/local/share/ca-certificates/AmeCA.crt
+#RUN echo AmeCA.crt >> /etc/ca-certificates.conf
+#RUN update-ca-certificates
+
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "GrpcClient.dll"]

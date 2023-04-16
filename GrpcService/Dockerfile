@@ -26,5 +26,5 @@ COPY --from=build /src/GrpcService/ame.pfx /certs/
 ENTRYPOINT ["dotnet", "GrpcService.dll"]
 
 #docker build -t test -f .\GrpcService\Dockerfile .
-#docker run --network ame -p 18080:18080 -p 18081:18081 -p 18082:18082 --name ame test
+#docker run --network ame -p 18081:18081 -p 18082:18082 --name ame test
 

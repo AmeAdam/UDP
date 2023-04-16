@@ -1,9 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
-
+#pragma warning disable CA1416
 using System.Net;
 using System.Net.Quic;
 using System.Net.Security;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using Grpc.Net.Client;
 using GrpcService;
@@ -13,12 +12,14 @@ var remoteHost = "ame";
 Console.WriteLine("HttpClient...");
 
 var httpClientHandler = new HttpClientHandler();
-//httpClientHandler.ServerCertificateCustomValidationCallback = HttpClientHandler.DangerousAcceptAnyServerCertificateValidator;
 var httpClient = new HttpClient(httpClientHandler);
 httpClient.DefaultVersionPolicy = HttpVersionPolicy.RequestVersionOrHigher;
 httpClient.DefaultRequestVersion = HttpVersion.Version30;
 var httpResponseText  = await httpClient.GetStringAsync($"https://{remoteHost}:18081");
 Console.WriteLine(httpResponseText);
+
+
+
 
 Console.WriteLine("GRPC...");
 var channel = GrpcChannel.ForAddress($"https://{remoteHost}:18081", new GrpcChannelOptions { HttpClient = httpClient });
@@ -28,8 +29,11 @@ Console.WriteLine(response.Message);
 channel.Dispose();
 
 
-Console.WriteLine("QUIC...");
 
+
+
+
+Console.WriteLine("QUIC...");
 var port = 18082;
 var clientConnectionOptions = new QuicClientConnectionOptions
 {
@@ -54,5 +58,10 @@ buf = new byte[128];
 var len = await outgoingStream.ReadAsync(buf, 0, buf.Length);
 Console.WriteLine(Encoding.UTF8.GetString(buf, 0, len));
 
+
 await connection.CloseAsync(0x0C);
 await connection.DisposeAsync();
+
+
+
+#pragma warning restore CA1416

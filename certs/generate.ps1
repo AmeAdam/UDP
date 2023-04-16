@@ -8,7 +8,9 @@ openssl req -x509 -new -nodes -key AmeCA.key -sha256 -days 1825 -out AmeCA.pem
 
 #Instalacja certyfikatu CA, 
 #windows: certlm.msc
-#linux: skopiuj AmeCA.crt /usr/local/share/ca-certificates
+#linux: skopiuj AmeCA.crt /usr/local/share/ca-certificates /etc/ssl/certs
+
+
 
 #Generowanie certyfikatu SSL:
 #utworzenia klucza prywatnego
